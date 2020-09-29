@@ -10,7 +10,7 @@ public class EmailValidation {
 	public void emailValidator() {
 		System.out.println("Enter your Email :");
 		String email = in.next();
-		Pattern pattern = Pattern.compile("^([a-z]){1,}([.+_-]){0,1}[0-9a-z]*(@){1}([0-9a-z]*)(\\.([a-z]){2,}){1}(\\.[a-z][a-z])?$");
+		Pattern pattern = Pattern.compile("^([a-z]){1,}[a-z0-9]*([.+_-]){0,1}[0-9a-z]+(@){1}([0-9a-z]+)(\\.([a-z]){2,}){1}(\\.[a-z]{2,})?$");
 		Matcher matcher = pattern.matcher(email);
 		Boolean b = matcher.find();
 		if (b)
